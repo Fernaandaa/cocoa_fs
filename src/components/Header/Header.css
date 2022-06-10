@@ -1,267 +1,255 @@
-*{
-	padding: 0;
-	margin: 0;
-	text-decoration: none;
-	list-style: none;
-	font-family: 'Coco';
-	font-weight: 200;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+.container-nav{
+    
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: 170px;
+    
+}
+.navbar {
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #1c0802;
+    background-size: cover;
+    background-image: url(../../img/background\ nav.png);
+    background-repeat: no-repeat;
+    /*padding-left: 20%; */
+    padding-right: 10%;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.1rem;
+    height: 30%;
+    
 }
 
-body{
-	margin:0;
-	padding:0;
+
+
+.i-nav, .i-cart {
+    color: gold;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
-nav{
-	height: 100%;
-	width: 100%;
+/* .i-nav {
+    color: #1c0802;
+} */
+
+.navbar a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul .list-subitem {
+    list-style: none;
+    padding-top: 2%;
+}
+
+.list > li .subitems{
+    display: block;
+    padding: 5px 5px;
+    text-decoration: none;
+    
+}
+
+ul .list-subitem {
+    list-style: none;
+    line-height: 2;
+    padding: 2%;
+    position: absolute;
+    background-color: #1c0802;
+    width: max-content;
+    display: none;
+    text-align: center;
+}
+
+ul .list li:hover ul .list-subitem {
+    display: block;  
+}
+
+.list > li .list-subitem:hover{
+    /* background-color: gold; */
+    color: #1c0802;
+    transition: all 1s;
+
+}
+
+.container-logo-nav{
+     min-width: 150px;
+     min-height: 150px;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: absolute;
+     top: 1%;
+     left: 3.5%; 
+}
+
+.logo {
+    
+    background-color: #d9d9d9;
+    border-radius:50%;
+    padding: 8%;
+    width: 100%;
+    height: 80%;
+    position: absolute;
     display: flex;
     justify-content: center;
-    align-items: center;
+
+    /* position: absolute;*/
+    
 }
 
-label .logo{
-	font-size: 50%;
-	font-weight: bold;
-	color: var(--golden-color);
-	padding: 0 100px;
-	line-height: 80px;
+.logo img{
+    width:100% ;
+    z-index: 10;
 }
 
-nav ul{
-	height: 100%;
+.c-logo {
+    background-color: transparent;
+    position: absolute;
+    top: 10%;
+    left: 2%;
+}
+
+.img-logo {
+    width: 15%;
+}
+
+.list {
+    list-style: none;
     display: flex;
     align-items: center;
-}
-
-nav li{
-	display: inline-block;
-	margin: 0 8px;
-	line-height: 80px;
-}
-
-nav a{
-	color: white;
-	font-size: 15px;
-	text-transform: uppercase;
-	border: 1px solid transparent;
-	padding: 7px 10px;
-	border-radius: 3px;
-}
-
-a .active, a:hover{
-	border: 1px solid var(--golden-color);
+    justify-content: center;
+    gap: 65px;
 	transition: .5s;
 }
 
-nav #icon{
-	color: var(--golden-color);
-	font-size: 30px;
-	line-height: 80px;
-	float: right;	
-	margin-right: 40px;
-	cursor: pointer;
-	display: none;
+li {
+    color: #fff;
 }
 
-
-
-.header{
-	height: 50px;
-	/* position: fixed;
-	width: 100%;
-	top: 0;
-	left: 0; */
-	background-color: var(--gray-transparent-color);
+.navbar a .active, .navbar a:hover{
+    transition: .5s;
+	border-bottom: 1px solid gold;
+    color: gold;
 }
 
-.list ul{
-	list-style: none;
-	display: flex;
-	justify-content: space-between;
-	
-}
-
-.list a{
-	color: var(--white-color);
-	font-size: 1.5rem;
-}
-
-.list li{
-	padding: 3%;
-}
-
-.list a:hover{
-	color: var(--golden-color);
-}
-
-.content{
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	padding: 5% 0%;
-	background-color: var(--chocolate-color);
-}
-
-.title_nav{
-	font-weight: lighter;
-    color: var(--golden-color);
-}
-
-/* .hamburger{
-  	background-color:transparent;
-	height:30px;
-	width:30px;
-	padding: 1.5% 0%;
-	-webkit-transform:translate3d(0, 0, 0);
-	transform:translate3d(0, 0, 0);
-	-webkit-transition:-webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-	transition:transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-	z-index:1002;
-	cursor:pointer;
-	-webkit-user-select:none;
-	-moz-user-select:none;
-	-ms-user-select:none;
-	user-select:none
-}
-
-.hamburger.is-active{
-  background-color:none;
-}
-
-._layer{
-	background: var(--golden-color);
-	margin-bottom:4px;
-	border-radius:2px;
-	width:28px;
-	height:4px;
-	opacity:1;
-	-webkit-transform:translate3d(0, 0, 0);
-	transform:translate3d(0, 0, 0);
-	-webkit-transition:all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-	transition:all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-}
-
-.hamburger:hover .-top{
-	-webkit-transform:translateY(-100%);
-	-ms-transform:translateY(-100%);
-	transform:translateY(-100%);
-}
-
-.hamburger:hover .-bottom{
-	-webkit-transform:translateY(100%);
-	-ms-transform:translateY(100%);
-	transform:translateY(100%);
-}
-
-.hamburger.is-active .-top{
-	-webkit-transform:translateY(200%) rotate(45deg) !important;
-	-ms-transform:translateY(200%) rotate(45deg) !important;
-	transform:translateY(200%) rotate(45deg) !important;
-}
-
-.hamburger.is-active .-mid{
-	opacity:0;
-}
-
-.hamburger.is-active .-bottom{
-	-webkit-transform:translateY(-200%) rotate(135deg) !important;
-	-ms-transform:translateY(-200%) rotate(135deg) !important;
-	transform:translateY(-200%) rotate(135deg) !important;
-}*/
-
-
-
-.links a{
-    font-size: 14px;
-}
-
-
-.menuppal.is_active{
-  transform: translate3d(0px, 0px, 0px);
-}
-
-.menuppal{
-   background-color: #1C0802;
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    overflow-y: scroll;
-    position: fixed;
-    top: 0;
-    transform: translate3d(0px, -100%, 0px);
-    transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
-    width: 100%;
-    z-index: 1001;
+.i-cart .active, .i-cart:hover {
+    color: #fff !important;
+    transition: .5s;
 } 
 
-.menuppal ul{
-  margin:0;
-  padding:0;
+#toggler , .nav label {
+    display: none;
 }
 
-.menuppal ul li { 
-  list-style: none;
-	text-align:center;
-	color: var(--golden-color);
-	font-size:0.2rem;
-	line-height:3em;
-	height:3em;
-	text-transform:none;
-	font-weight:bold;
+label{
+    display: none;
 }
 
-.menuppal ul li a{
-  text-decoration:none;
-  color:var(--white-color);
+.t-logo {
+    display: none;
+    color: gold;
+    font-size: 56px;
+    font-family: 'Dancing Script', cursive;
+    margin: -15% 0% 1%;
 }
 
-.menuppal ul li a:hover{
-  text-decoration:none;
-  color: var(--golden-color);
+.img-bottom {
+    display: none;
+    width: 40%;
+    margin-left: 32%;
 }
 
-@media  (max-width: 1024px) {
-	nav ul{
-		margin-right: 20px;
-	}
+@media screen and (max-width: 700px) {
 
-	nav a{
-		font-size: 17px;
-	}
+    .navbar {
+    justify-content: flex-end;
+    margin-top: -0.1%;
+    }    
+    
+    .i-nav {
+        padding: 10% 3%;
+    }
 
-	@media  (max-width: 768px) {
-		nav #icon{
-			display: block;
-		}
+    label{
+        display: block;
+    }
+    
+    
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
 
-		nav ul{
-			position: fixed;
-			width: 100%;
-			height: 100vh;
-			background-color: var(--chocolate-color);
-			top: 80px;
-			left: -100%;
-			text-align: center;
-			transition: all .5s;
-		}
+    .list {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
 
-		nav li{
-			display: block;
-			margin: 50px 0;
-			line-height: 30px;
-		}
+    #toggler:checked ~ .menu{
+        transition: 10s;
+        max-height: 100%;
+    }
 
-		nav a{
-			font-size: 20px;
-		}
+    .logo {
+        background-color: transparent;
+        top: -3%;
+        left: 0%;
+    }
 
-		a .active, a:hover{
-			border: none;
-		}
+    .img-logo{
+        display: none;
+    }
 
-		nav ul .show{
-			left: 0;
-		}
-	}
+    .img-bottom {
+        display: block;
+    }
+
+    .container-nav{
+    background-color: transparent;
+    display:contents;
+    align-items: center;
+    position: relative;
+    height: 200px;
+    }
+
+    .AA{opacity: 0;}
+
+    
+}
+
+@media screen and (max-width:1024px) {
+    .list {
+        gap: 35px;
+        
+    }
+}
+
+
+
+.as{
+    position: absolute;
+    background-color: rgba(255, 170, 0, 0.589);
+    
+}
+
+.subitems{
+    padding: 50%;
+}
+
+#list > li > ul {
+    display: none;
+}
+
+#list > li:hover >ul {
+    display: block;
 }

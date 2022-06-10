@@ -1,7 +1,7 @@
 import './Footer.css'
-import fb_icon from '../../utils/icons/bxl-facebook-circle.svg'
-import ig_icon from '../../utils/img/instagram.svg'
-import wa_icon from '../../utils/img/WhatsApp.svg'
+import fb_icon from '../../img/icons/bxl-facebook-circle.svg'
+import ig_icon from '../../img/icons/bxl-instagram.svg'
+import wa_icon from '../../img/icons/WhatsApp.svg'
 
 function Footer() {
     return (

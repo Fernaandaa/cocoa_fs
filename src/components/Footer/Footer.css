@@ -1,5 +1,6 @@
+
 #container_footer{
-    background-image: url(../../utils/img/footer.svg);
+    background-image: url(../../img/footer/footer.svg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -9,7 +10,7 @@
 
 
 footer{
-    background-image: url(../../utils/img/FOOTER.png);
+    background-image: url(../../img/footer/FOOTER.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -19,7 +20,7 @@ footer{
  
  }
  
- .footer_social-media{
+.footer_social-media{
      width: 100%;
      height:60%;
      display: inline-flex;
